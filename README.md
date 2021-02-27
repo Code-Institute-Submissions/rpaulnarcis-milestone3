@@ -1,45 +1,139 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+MileStone README.md
 
-Welcome USER_NAME,
+### ** Milestone 3 Project**
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
 
-## Gitpod Reminders
+Welcome! [View live project here]
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Milestone Project Home Page<img src="#">
 
-`python3 -m http.server`
+### **UX - User Experience Design:**
+This website was created for Goals
+The goal of this website is so that, user's  can submit to a library of recipes that are feel. Users should feel like they are righr at home with their own with full access to all cooking recipes as well as being able to contribute their own recipes as well.
 
-A blue button should appear to click: *Make Public*,
+#### User Stories
+- As a first - time visitor, I want to easily understand the project from the moment you get to the landing page.
+- As a first - time visitor, I want to easily be able to navigate, be able to go back and forth to pages quickly.
+- As a first - time visitor, I want the project to not be too exhausting to look at.
+- As a first - time visitor, I want to able to pick back up from where I left off, so I can simply just carry on if I took a break? 
+- As a first - time visitor, I would like to be able to create a new account, and also be able log in/out of account.
+- As an existing - One must feel like cooking and trying our various recipes once visited the site.
 
-Another blue button should appear to click: *Open Browser*.
+#### Wireframes, mockups, diagrams, etc
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### Wireframe 1:
+Home Page <img src="#">
+#### Wireframe 2:
+<img src="#">
+#### Wireframe 3:
+<img src="#">
+#### Wireframe 4:
+e<img src="#">
 
-A blue button should appear to click: *Make Public*,
+### **Features:**
+#### Features presented across the project
+- Navbar - Responsive, toggles to a hamburger menu. There are links to all of the pages as well as a sign-in/sign-up button. The main logo acts as a link back to the home page.
+- Footer comprises of social links, contact information.
+- Consistent images are used throughout the project, which gives it a humane feel and helps to invoke user emotions. All images are relevant to the content.
+- The contrast of fonts between header and proceeding text, help bring the page to life.
+#### Features presented on individual pages
+#### Home page
+- 
+####  page 
+- 
+####  page
+-  
+####  page
+- 
+#### Features Left to Implement
 
-Another blue button should appear to click: *Open Browser*.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### **Technologies Used:**
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+    - Used as the building block for the project and to structure the content.
+- [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+    - Used to style all the web content across the project.
+- [Bootstrap](https://getbootstrap.com/)
+    - Used as the main framework to make the project responsive.
+- [jQuery](https://jquery.com/)
+    - Used with Bootstrap to make the navbar responsive.
+- [JavaScript](https://www.javascript.com/)
+    - Used for the Bootstrap navbar extending collapse plugin to implement responsive behavior.
+- [Google Fonts](https://fonts.google.com/)
+    - Used to obtain the fonts linked in the header, fonts used were Roboto and Exo.
+- [Font Awesome](https://fontawesome.com/)
+    - Used to obtain social media icons used in the footer.
+- [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+    - Used as a primary method of fixing spacing issues, finding bugs, and testing responsiveness across the project.
+- [Github](https://github.com/)
+    - Used to store code for the project after being pushed.
+- [Git](https://git-scm.com/)
+    - Used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub.
+- [Gitpod](https://www.gitpod.io/)
+    - Used as the development environment.
+- [WireframeSketcher](https://wireframesketcher.com/)
+    - Used to create Wireframes for the project.
+- [AutoPrefixer](https://autoprefixer.github.io/)
+    - Used to parse my CSS and vendor prefixes.
+- [Grammarly](https://app.grammarly.com/)
+    - Used to fix grammar errors across the project.    
 
-## Updates Since The Instructional Video
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### **Testing:**
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+#### User testing stories from User Experience Design (UX) Section
+- 
+#### Further Testing
+- The project was tested on the following browsers with success, Google Chrome, Microsoft Edge,  Mozilla Firefox, and Opera.
+- The project was manually tested on  Apple iPhone XS Max and a  Nexus 5X with success.
+- Google Chrome Developer tools and responsivetesttool.com were used throughout the project to help with responsiveness across devices.
+- Google Chrome Development tools and responsivetesttool.com used to emulate devices.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+ - Mobile
+    
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- Tablet
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+    -
+- Laptop / Desktop
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+    - 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+#### Syntax - HTML & CSS
+<i class="far fa-clone"></i> Using https://validator.w3.org and filtering errors related to Angular (ex: no doctype,...)
+- index.html (Home) &check;
+- .html &check;
+- .html &check;
+- .html &check;
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
 
---------
+<i class="far fa-clone"></i> Using https://jigsaw.w3.org/css-validator/ I validated the following spreadsheet:
 
-Happy coding!
+- defaultStylesheet.css: &check;
+
+#### Navigation
+#### Navigation on Mobile
+
+#### Navigation on Tablet:
+
+#### Navigation on Desktop
+
+#### Sign-Up /Sign button
+
+#### Known Bugs and fixes
+
+### **Deployment:**
+
+#### Deployment Process
+
+
+### **Authors:**
+- This project was created by Robert P Narcis an upcoming full-stack software developer.
+### **Credits:**
+ 
+### **Content:**
+-
+### **Media:**
+- 
+### **Acknowledgements:**
+- 
