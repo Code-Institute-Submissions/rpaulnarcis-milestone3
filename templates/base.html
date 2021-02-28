@@ -16,7 +16,7 @@
 
     <header>
         <!-- top navbar -->
-         <nav class="nav-extended text-shadow  orange lighten-3">
+         <nav class="nav-extended text-shadow orange lighten-3">
             <div class="nav-wrapper">
             <a href="{{ url_for('get_recipes')}}" class="brand-logo">The Cookbook</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
@@ -25,7 +25,7 @@
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user'])}}">Profile</a></li>
                 <li><a href="#">Recipe</a></li>
-                <li><a href="#">Add Recipe</a></li>
+                <li><a href="{{ url_for('add_recipe')}}">Add Recipe</a></li>
                 <li><a href="{{ url_for('logout')}}">Log Out</a></li>
             {% else%}
                 <li><a href="{{ url_for('login')}}">Log In</a></li>
@@ -42,7 +42,7 @@
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user'])}}">Profile</a></li>
                 <li><a href="#">Recipe</a></li>
-                <li><a href="#">Add Recipe</a></li>
+                <li><a href="{{ url_for('add_recipe')}}">Add Recipe</a></li>
                 <li><a href="{{ url_for('logout')}}">Log Out</a></li>
             {% else%}
                 <li><a href="{{ url_for('login')}}">Log In</a></li>

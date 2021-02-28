@@ -2,7 +2,7 @@
 {% block content%}
 
     <h2>I'm extending the base template!</h2>
-
+<!--
     {% for recipe in recipes %}
         {{ recipe.recipe_name}}<br>
         {{ recipe.recipe_short_description}}<br>
@@ -12,40 +12,48 @@
         {{ recipe.recipe_cooking_time}}<br>
         {{ recipe.recipe_image_url}}<br>
     {% endfor %}
-
+-->
 <div class="row">
     <form class="col s8">
+        {% for recipe in recipes %}
         <div class=" input-field col s8 ">
-            <input placeholder="Recipe Name." id="recipe_name" type="text">
-            <label for="first_name" id="recipe-name">Recipe Name</label>
+        <input placeholder="Recipe Name." id="recipe_name" type="text" >
+        <label for="first_name" id="recipe-name">Recipe Name</label>
         </div>
         <div class="input-field col s8">
             <textarea placeholder="Please weite a short discription(150 characters max)" id="discription"
                 class="materialize-textarea"></textarea>
             <label for="textarea1" id="short-discription">Short Description</label>
+            {{ recipe.recipe_short_description}}
         </div>
         <div class="input-field col s8">
             <textarea placeholder="Please list each ingredient in its's own line." id="Ingredient"
                 class="materialize-textarea"></textarea>
             <label for="textarea1" id="ingredient">Ingredients</label>
+            {{ recipe.recipe_ingredients}}
         </div>
         <div class="input-field col s8">
             <textarea placeholder="Please number each step and write it on it's own line." id="Direction"
                 class="materialize-textarea"></textarea>
             <label for="textarea1" id="direction">Directions</label>
+            {{ recipe.recipe_directions}}
         </div>
         <div class="input-field col s8">
             <input placeholder="Prep Time." id="Prep_time" type="text">
             <label for="prep_time" id="prep_time">Prep Time</label>
+            {{ recipe.recipe_prep_time}}
         </div>
         <div class="input-field col s8">
             <input placeholder="Cooking Time." id="Cooking_time" type="text" class="validate">
             <label for="Cooking_time" id="cooking-time">Cooking Time</label>
+            {{ recipe.recipe_cooking_time}}
         </div>
         <div class="input-field col s8">
             <input placeholder="Image Url." id="image_url" type="text" class="validate">
             <label for="image_url" id="image-url">Image Url</label>
+            {{ recipe.recipe_image_url}}
         </div>
+       {% endfor %} 
     </form>
 </div>
 
