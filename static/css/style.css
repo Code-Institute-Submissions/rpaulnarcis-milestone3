@@ -5,3 +5,43 @@
 .flashes h4 {
     line-height: 2;
 }
+
+#recipe-name{
+    font-size: 25px;
+    color:#ffb74d;
+}
+
+#recipe-category{
+    font-size: 25px;
+    color:#ffb74d;
+}
+
+#short-discription{
+    font-size: 25px;
+    color:#ffb74d;
+}
+
+#ingredient{
+    font-size: 25px;
+    color:#ffb74d;
+}
+
+#direction{
+   font-size: 25px;
+   color:#ffb74d;
+}
+
+#prep_time{
+   font-size: 25px;
+   color:#ffb74d;
+}
+
+#cooking-time{
+   font-size: 25px;
+   color:#ffb74d;
+}
+
+#image-url{
+   font-size: 25px;
+   color:#ffb74d;
+}
