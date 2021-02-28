@@ -3,64 +3,68 @@
 
     <h3 class="orange-text text-darken-10 center-align">Add Recipe</h3>
 
-    <div class="row">
+    <div class="row card-pannel grey lighten-5">
         <form class="col s12" method="POST" action="">
             <div class="row">
                 <div class="input-field col s12">
-                    <select id="cat">
-                        <option value="" disabled selected>Categories</option>
-                        <option value="1">Main Dishes</option>
-                        <option value="2">Desserts</option>
-                        <option value="3">Soup</option>
-                        <option value="4">Appetizers</option>
-                        <option value="5">Cocktails</option>
-                        <option value="6">Others</option>
+                    <select id="category_name" name="category_name" class="validate" required>
+                        <option value="" disabled selected>Choose Category</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
                     </select>
-                    <label id="categories">Categories</label>
+                        <label id="category_name">Category</label>
                 </div>
             </div>
             <div class="row">
                 <div class=" input-field col s12 ">
-                    <input placeholder="Recipe Name." id="recipe_name" type="text">
+                    <input placeholder="Recipe Name." id="recipe_name" name="recipe_name"
+                        minlength="5" maxlength="50" type="text" required>
                     <label for="first_name" id="recipe-name">Recipe Name</label>
                 </div>
             </div>
             <div class="row">           
                 <div class="input-field col s12">
-                    <textarea placeholder="Please weite a short discription(150 characters max)" id="discription"
-                        class="materialize-textarea"></textarea>
+                    <textarea placeholder="Please weite a short discription(150 characters max)" name="recipe_discription"
+                        minlength="5" maxlength="150"  id="discription"
+                        class="materialize-textarea" required></textarea>
                     <label for="textarea1" id="short-discription">Short Description</label>
                 </div>
             </div>
             <div class="row">    
                 <div class="input-field col s12">
-                    <textarea placeholder="Please list each ingredient in its's own line." id="Ingredient"
-                        class="materialize-textarea"></textarea>
+                    <textarea placeholder="Please list each ingredient in its's own line." name="recipe_ingredient"
+                         minlength="5" maxlength="200" id="Ingredient"
+                        class="materialize-textarea" required></textarea>
                     <label for="textarea1" id="ingredient">Ingredients</label>
                 </div>
             </div>
             <div class="row">    
                 <div class="input-field col s12">
-                    <textarea placeholder="Please number each step and write it on it's own line." id="Direction"
-                        class="materialize-textarea"></textarea>
+                    <textarea placeholder="Please number each step and write it on it's own line."
+                        name="recipe_direction" minlength="5" maxlength="200" id="Direction"
+                        class="materialize-textarea" required></textarea>
                     <label for="textarea1" id="direction">Directions</label>
                 </div>
             </div>
             <div class="row">    
                 <div class="input-field col s12">
-                    <input placeholder="Prep Time." id="Prep_time" type="text">
+                    <input placeholder="Prep Time." id="Prep_time" name="recipe_prep_time"
+                         minlength="5" maxlength="50" type="text" required>
                     <label for="prep_time" id="prep_time">Prep Time</label>
                 </div>
             </div>
             <div class="row">    
                 <div class="input-field col s12">
-                    <input placeholder="Cooking Time." id="Cooking_time" type="text" class="validate">
+                    <input placeholder="Cooking Time." id="Cooking_time" type="text" name="recipe_cook_time"
+                         minlength="5" maxlength="50" class="validate" required>
                     <label for="Cooking_time" id="cooking-time">Cooking Time</label>
                 </div>
             </div>
             <div class="row">    
                 <div class="input-field col s12">
-                    <input placeholder="Image Url." id="image_url" type="text" class="validate">
+                    <input placeholder="Image Url." id="image_url" type="text" name="recipe_url"
+                         minlength="5" maxlength="50" class="validate">
                     <label for="image_url" id="image-url">Image Url</label>
                 </div>    
             </div>
