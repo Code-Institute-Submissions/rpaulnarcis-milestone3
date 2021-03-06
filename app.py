@@ -20,10 +20,27 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_recipes")
-def get_recipes():
-    recipes = list(mongo.db.recipes.find())
+@app.route("/recipes")
+def recipes():
+    query = request.args.get("query")
+    if not query:
+        recipes = mongo.db.recipes.find().sort('added_on', -1)
+    else:
+        # Finds the recipe using keywords the user enters
+        mongo.db.recipes.create_index([('$**', 'text')])
+        recipes = mongo.db.recipes.find(
+            {"$text": {"$search": query}}).limit(10)
     return render_template("recipes.html", recipes=recipes)
+
+
+@app.route('/show_recipe/<recipe_id>')
+def show_recipe(recipe_id):
+    my_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
+    all_categories = mongo.db.categories.find()
+    mongo.db.recipes.update(
+        my_recipe, {'$inc': {'views': 1}})
+    return render_template(
+        'show_recipe.html', recipe=my_recipe, categories=all_categories)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -96,12 +113,6 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
-
-
-@app.route("/add_recipe")
-def add_recipe():
-    categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_recipe.html", categories=categories)
 
 
 if __name__ == "__main__":

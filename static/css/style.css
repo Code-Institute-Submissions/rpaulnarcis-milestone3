@@ -54,3 +54,44 @@
 #cat{
    color:#b0bec5;
 }
+
+.carousel-item
+{
+  background-size : cover;
+  background-position: center;
+}
+
+.card {
+    width: 30%;
+    height: 500px;
+    float: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect*/
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    background-color: #f1f1f1;
+}
+
+.card-img-top{
+    height: 280px;
+}
+
+
+
+.card-image{
+    height: 280px; /* Your height here */
+    overflow: hidden;
+}
+
+.recipe.divider{
+    margin-top: 100px;
+   
+}
+
+.container.search{
+    width:500px;
+}
+
+.material-icons{
+    font-size: 20px;
+}

@@ -1,18 +1,60 @@
 {% extends "base.html" %}
-{% block content%}
+{% block content %}
 
-    <h2>I'm extending the base template!</h2>
-<!--
-    {% for recipe in recipes %}
-        {{ recipe.recipe_name}}<br>
-        {{ recipe.recipe_short_description}}<br>
-        {{ recipe.recipe_ingredients}}<br>
-        {{ recipe.recipe_directions}}<br>
-        {{ recipe.recipe_prep_time}}<br>
-        {{ recipe.recipe_cooking_time}}<br>
-        {{ recipe.recipe_image_url}}<br>
-    {% endfor %}
--->
-
-
-{% endblock %}    
+<!---Page to display recipe when recipe is clicked-->
+<section>
+    <h3 class="center-align">Recipes</h3>
+    <div class="container search">
+        <nav>
+            <div class="nav-wrapper green">
+                <form method="GET" action="{{ url_for('recipes') }}">
+                    <div class="input-field">
+                        <input id="search" type="search" required>
+                        <label for="search"><i class="material-icons">search</i></label>
+                        <!-- I've put "red-text" class to emphasize -->
+                        <i class="material-icons red-text">close</i>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </div>
+</section>    
+    <section id="recipe-card">
+<div class="fist">        
+        {% if recipes.count() %} {% for recipe in recipes %}
+        <!---For loop used to display recipe from database -->
+        
+        <div class=" col s4 center-align ">
+            <div class="card">
+                
+                <div class="card-image">
+                    <a class="recipe-link" href="{{url_for('show_recipe', recipe_id = recipe._id)}}">
+                        <img src="{{recipe.recipe_image_url}}" class="card-img-top" alt="{{recipe.recipe_name}}" />
+                    </a>
+                </div>
+                <h5 class="card-title">{{recipe.recipe_name}}</h5>
+                <p class="card-content">{{recipe.recipe_short_description}}</p>
+                <span class="edit_span text-center">
+                    {% if recipe.added_on %}
+                    <small class="text-muted">Added on: {{recipe.added_on}}</small>
+                    {% else %}
+                    <small class="text-muted center-align">Last Updated: {{recipe.last_update}}</small>
+                    {% endif %}
+                </span>
+                <div class="card-action">
+                    <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}" class="center-align">View recipe</a>
+                </div>
+            </div>
+        </div>
+        </div>
+</section>
+<div>
+    {% endfor %} {% else %}
+    <p class="no-result">No recipes found. Please try again.</p>
+    {% endif %}
+<div class="row">
+<div class="col s12">
+<div class="recipe divider"></div>
+</div>
+</div>   
+{% endblock %}         

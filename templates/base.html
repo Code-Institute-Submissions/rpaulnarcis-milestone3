@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
-    <link rel="icon" href="{{url_for('static', filename = 'img/favicon/favicon.png')}}" type="image/png" sizes="32x32" />
+    
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" type="text/css">
     {% block styles %}
     {% endblock %} 
@@ -16,16 +16,18 @@
 
     <header>
         <!-- top navbar -->
-         <nav class="nav-extended text-shadow orange lighten-3">
+         <nav class="nav-extended text-shadow green">
             <div class="nav-wrapper">
-            <a href="{{ url_for('get_recipes')}}" class="brand-logo">The Cookbook</a>
+            <a href="{{ url_for('recipes')}}" class="brand-logo">The Cookbook</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="{{ url_for('get_recipes')}}">Home</a></li>
+                <li><a href="{{ url_for('recipes')}}">Home</a></li>
+                <li><a href="{{ url_for('recipes')}}">Recipes</a></li>
+                <li><a href="#">Show Recipies</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user'])}}">Profile</a></li>
-                <li><a href="#">Recipe</a></li>
-                <li><a href="{{ url_for('add_recipe')}}">Add Recipe</a></li>
+                
+                <li><a href="#">Add Recipe</a></li>
                 <li><a href="{{ url_for('logout')}}">Log Out</a></li>
             {% else%}
                 <li><a href="{{ url_for('login')}}">Log In</a></li>
@@ -38,11 +40,13 @@
         <!-- mobile sidenavbar-->
         <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align orange-text text-darken-10">The Cookbook</h4></li>
-            <li><a href="{{ url_for('get_recipes')}}">Home</a></li>
+            <li><a href="{{ url_for('recipes')}}">Home</a></li>
+             <li><a href="{{ url_for('recipes')}}">Recipe</a></li>
+             <li><a href="#">Show Recipe</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user'])}}">Profile</a></li>
-                <li><a href="#">Recipe</a></li>
-                <li><a href="{{ url_for('add_recipe')}}">Add Recipe</a></li>
+               
+                <li><a href="#">Add Recipe</a></li>
                 <li><a href="{{ url_for('logout')}}">Log Out</a></li>
             {% else%}
                 <li><a href="{{ url_for('login')}}">Log In</a></li>
@@ -50,6 +54,44 @@
             {% endif %}
         </ul>
     </header>
+
+    <div class="row">   
+<section class="slider ">
+    <div class="slider col s12">
+    <ul class="slides">
+      <li>
+        <img class="img-slider" src="static/Images/Quick-Keto-Strawberry-Mousse.jpg">
+        <div class="caption center-align">
+          <h2>This is our big Tagline!</h2>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img class="img-slider" src="static/Images/spicy-grilled-shrimp.jpg">
+        <div class="caption left-align">
+          <h2>Left Aligned Caption</h2>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img class="img-slider" src="static/Images/Peanut Stew with Chicken.jpg">
+        <div class="caption right-align">
+          <h2>Right Aligned Caption</h2>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img class="img-slider" src="static/Images/egg-casserole.jpg">
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+</div>
+
 
     <section>
         <!-- flash message -->
@@ -68,6 +110,51 @@
         {% block content %}
         {% endblock %}
     </main>
+
+    <footer class="page-footer green">
+        <div class="container ">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">
+                        Footer Content
+                    </h5>
+                    <p class="grey-text text-lighten-4">
+                        Rows and columns are
+                        used to organize the footer content.
+                    </p>
+    
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">
+                                Link 1
+                            </a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">
+                                Link 2
+                            </a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">
+                                Link 3
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright green darken-3">
+            <div class="container ">
+                © All rights reserved 2021
+                <a class="grey-text text-lighten-4 right" href="#!">
+                    More Links
+                </a>
+            </div>
+        </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js')}}"></script>
