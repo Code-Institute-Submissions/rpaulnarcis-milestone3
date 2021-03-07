@@ -1,31 +1,41 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
+
+<h3 class="center-align">The Cookbook Recipes</h3>
+<div class="divider show"></div>
+<div class="row">
+    <div class="col s6 offset-s4 center-align">
+        <div class="card show">
+            <div class="card-image">
+                <img src="{{recipe.recipe_image_url}}">
+            </div>
+        </div>
+    </div>
+</div>
+ <div class="show-header divider"></div>
+<h4 class="show header center-align">
+    {{ recipe.recipe_name }}
+</h4>
 
 <div class="row">
 <div class="col s12">
-<a class="recipe-link" href="{{ recipe.recipe_image_url)}}"></a>
+<a class="recipe-link" href="{{ recipe.recipe_image_url}}"></a>
 </div>
 </div>
-
-
-<h1 class="header">
-    {{ recipe.recipe_name }}
-</h1>
-<p class="username">by {{ url_for('profile', username=session['user'])}}</p>
-
+<div class="col s12 center-align">
+       <p class="username">by {{ url_for('profile', username=session['user'])}}</p> <h5>{{ recipe.recipe_categories}}</h5>
+    </div>
 
 <div class="row">
-    <div class="col s12">
-        <p>{{ recipe.recipe_categories}}</p>
+    <div class="col s12 center-align">
+        <h6>{{ recipe.recipe_short_description }}</h6>
     </div>
 </div>
-
-
 <div class="row">
-    <div class="col s12">
-        <p>{{ recipe.recipe_short_description }}</p>
-    </div>
+<div class="col s12 m3 center-align">
+    <p><h6>Prep Time</h6><slan>{{ recipe.recipe_prep_time }}</span><h6>Cook Time</h6><span>{{ recipe.recipe_cooking_time }}</span></p>
 </div>
-
+</div>   
 
 <div class="row">
     <div class="col s12 m3">
@@ -40,29 +50,13 @@
     </div>
 
 
-    <div class="col s12 m3">
-        <h6>Prep Time</h6>
-        <p>{{ recipe.recipe_prep_time }}</p>
-    </div>
+    
 
 
     <div class="col s12 m3">
-        <h6>Cook Time</h6>
-        <p>{{ recipe.recipe_cooking_time }}</p>
+        
     </div>
 </div>
-
-
-<div class="col s12 m3">
-        <h6>Ingredients</h6>
-        <ul>
-            {% for ingredient in recipe.ingredients %}
-            <li>{{recipe.recipe_ingredients}}{{ "," if not loop.last }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-
-
 <div class="row">
     <div class="col s12">
         <h6>Steps</h6>
@@ -73,7 +67,9 @@
 
 <div class="row">
     <div class="col s12">
-        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn">Edit</a>
-        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn">Delete</a>
+        <a href="" class="waves-effect waves-light btn">Edit</a>
+        <a href="" class="waves-effect waves-light btn">Delete</a>
     </div>
 </div>
+
+{% endblock %}

@@ -95,3 +95,20 @@
 .material-icons{
     font-size: 20px;
 }
+.divider.show{
+    margin-top: 20px;
+    
+}
+
+.card.show{
+    width:370px;
+    height: 200px;
+}
+
+.show.header.center-align{
+    margin-top: 20px;
+}
+
+.show-header.divider{
+    margin-top: 80px;
+}
