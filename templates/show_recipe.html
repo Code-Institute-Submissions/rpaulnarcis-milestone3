@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h3 class="center-align">The Cookbook Recipes</h3>
-<div class="divider show"></div>
+<h5 class="center-align">The Cookbook Recipes</h5>
+<div class="divider show black"></div>
+<h4 class="show header center-align">
+    {{ recipe.recipe_name }}
+</h4>
+<div class="divider black"></div>
 <div class="row">
     <div class="col s6 offset-s4 center-align">
         <div class="card show">
@@ -12,63 +16,55 @@
         </div>
     </div>
 </div>
- <div class="show-header divider"></div>
-<h4 class="show header center-align">
-    {{ recipe.recipe_name }}
-</h4>
+<div class="show-header divider black"></div>
+
 
 <div class="row">
-<div class="col s12">
-<a class="recipe-link" href="{{ recipe.recipe_image_url}}"></a>
-</div>
+    <div class="col s12">
+        <a class="recipe-link" href="{{ recipe.recipe_image_url}}"></a>
+    </div>
 </div>
 <div class="col s12 center-align">
-       <p class="username">by {{ url_for('profile', username=session['user'])}}</p> <h5>{{ recipe.recipe_categories}}</h5>
-    </div>
-
+    <h6 class="username">by {{ url_for('profile', username=session['user'])}}</h6>
+</div>
+<div class="divider black"></div>
 <div class="row">
     <div class="col s12 center-align">
-        <h6>{{ recipe.recipe_short_description }}</h6>
+        <h5>{{ recipe.recipe_short_description }}</h5>
     </div>
 </div>
+<div class="divider black"></div>
 <div class="row">
-<div class="col s12 m3 center-align">
-    <p><h6>Prep Time</h6><slan>{{ recipe.recipe_prep_time }}</span><h6>Cook Time</h6><span>{{ recipe.recipe_cooking_time }}</span></p>
-</div>
-</div>   
-
-<div class="row">
-    <div class="col s12 m3">
-        <h6>Ingredient</h6>
-        <p>{{ recipe.recipe_ingredients}}</p>
-    </div>
-
-
-    <div class="col s12 m3">
-        <h6>Steps</h6>
-        <p>{{ recipe.recipe_steps}}</p>
-    </div>
-
-
-    
-
-
-    <div class="col s12 m3">
-        
+    <div class="col s12 center-align">
+        <h5> {{ recipe.recipe_categories}} | <small class="text-muted">PREP:</small> {{ recipe.recipe_prep_time }} |
+            <small class="text-muted">COOK:</small> {{ recipe.recipe_cooking_time }}</h5>
     </div>
 </div>
+<div class="divider black"></div>
 <div class="row">
-    <div class="col s12">
-        <h6>Steps</h6>
-        <pre>{{ recipe.recipe_steps}}</pre>
-    </div>
+    <div class="col s7 push-s5"><span class="flow-text-steps">
+            <div class="card blue-grey darken-1">
+                 <span class="card-title white-text">Steps</span>
+                <div class="card-content white-text">
+                    <p>{{ recipe.recipe_steps}}</p>
+                </div>
+            </div>
+        </span></div>
+    <div class="col s5 pull-s7"><span class="flow-text-ingredients">
+            <div class="card grey lighten-1">
+                <span class="card-title black-text">Ingredients</span>
+                <div class="card-content black-text">
+                    <p>{{ recipe.recipe_ingredients}}</p>
+                </div>
+            </div>
+        </span></div>
 </div>
-
-
 <div class="row">
-    <div class="col s12">
-        <a href="" class="waves-effect waves-light btn">Edit</a>
-        <a href="" class="waves-effect waves-light btn">Delete</a>
+    <div class="col s6 ">
+        <a href="" class="waves-effect waves-light btn-large light-blue darken-4">Edit</a>
+    </div>
+    <div class="col s6 ">
+        <a href="" class="waves-effect waves-light btn-large red">Delete</a>
     </div>
 </div>
 

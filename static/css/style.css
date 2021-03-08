@@ -95,7 +95,7 @@
 .material-icons{
     font-size: 20px;
 }
-.divider.show{
+.divider.show.black{
     margin-top: 20px;
     
 }
@@ -111,4 +111,20 @@
 
 .show-header.divider{
     margin-top: 80px;
+}
+
+.card.blue-grey.darken-1{
+    width: fit-content;
+}
+
+.card.grey.lighten-1{
+    width: fit-content;
+}
+
+a.waves-effect.waves-light.btn-large.light-blue darken-4{
+    width: 100%;
+}
+
+a.waves-effect.waves-light.btn-large.red{
+    width: 100%;
 }
