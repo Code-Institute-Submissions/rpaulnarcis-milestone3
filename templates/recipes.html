@@ -28,7 +28,7 @@
             <div class="card">
                 
                 <div class="card-image">
-                    <a class="recipe-link" href="{{ url_for('show_recipe'), recipe_id=recipe._id }}">
+                    <a class="recipe-link" href="{{url_for('show_recipe', recipe_id = recipe._id)}}">
                         <img src="{{recipe.recipe_image_url}}" class="card-img-top" alt="{{recipe.recipe_name}}" />
                     </a>
                 </div>
@@ -42,7 +42,7 @@
                     {% endif %}
                 </span>
                 <div class="card-action">
-                    <a href="{{ url_for('show_recipe'), recipe_id=recipe._id }}" class="center-align">View recipe</a>
+                    <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}" class="center-align">View recipe</a>
                 </div>
             </div>
         </div>
@@ -56,5 +56,6 @@
 <div class="col s12">
 <div class="recipe divider"></div>
 </div>
-</div>   
+</div> 
+
 {% endblock %}         
