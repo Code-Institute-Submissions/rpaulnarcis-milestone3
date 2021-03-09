@@ -4,7 +4,7 @@
     <h3 class="green-text text-darken-10 center-align">Add Recipe</h3>
 
     <div class="row card-pannel grey lighten-5">
-        <form class="col s12" method="POST" action="{{ url_for('add_recipe')}}">
+        <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
             <!--category selection -->
             <div class="row">
                 <div class="input-field col s12">
@@ -28,8 +28,8 @@
             <!-- short discription-->
             <div class="row">           
                 <div class="input-field col s12">
-                    <textarea placeholder="Please weite a short discription(250 characters max)" name="recipe_discription"
-                        minlength="5" maxlength="150"  id="discription"
+                    <textarea placeholder="Please weite a short discription(250 characters max)" name="recipe_short_description"
+                        minlength="5" maxlength="300"  id="recipe_short_description"
                         class="materialize-textarea" required></textarea>
                     <label for="textarea1" id="short-discription">Short Description</label>
                 </div>
@@ -37,19 +37,19 @@
             <!-- ingredients -->
             <div class="row">    
                 <div class="input-field col s12">
-                    <textarea placeholder="Please list each ingredient in its's own line." name="recipe_ingredient"
-                         minlength="5" maxlength="500" id="Ingredient"
+                    <textarea placeholder="Please list each ingredient in its's own line." name="recipe_ingredients"
+                          id="Ingredient"
                         class="materialize-textarea" required></textarea>
                     <label for="textarea1" id="ingredient">Ingredients</label>
                 </div>
             </div>
-            <!-- directions -->
+            <!-- steps -->
             <div class="row">    
                 <div class="input-field col s12">
                     <textarea placeholder="Please number each step and write it on it's own line."
-                        name="recipe_direction" minlength="5" maxlength="500" id="Direction"
+                        name="recipe_steps"  id="Direction"
                         class="materialize-textarea" required></textarea>
-                    <label for="textarea1" id="direction">Directions</label>
+                    <label for="textarea1" id="steps">Steps</label>
                 </div>
             </div>
             <!-- prep time -->
@@ -63,24 +63,23 @@
             <!-- cooking time -->
             <div class="row">    
                 <div class="input-field col s12">
-                    <input placeholder="Cooking Time." id="Cooking_time" type="text" name="recipe_cook_time"
+                    <input placeholder="Cooking Time." id="Cooking_time" type="text" name="recipe_cooking_time"
                          minlength="5" maxlength="50" class="validate" required>
                     <label for="Cooking_time" id="cooking-time">Cooking Time</label>
                 </div>
             </div>
             <!-- image url -->
             <div class="row">    
-              <div class="input-field col s12">
-                    <textarea placeholder="Image Url."
-                        name="recipe_url" minlength="5" maxlength="500" name="image_url"
-                        class="materialize-textarea" required></textarea>
-                    <label for="textarea1" id="image-url">Image Url</label>
-                </div> 
+                <div class="input-field col s12">
+                    <input placeholder="Cooking Time." id="Image-url" type="text" name="recipe_image_url" 
+                        class="validate" required>
+                    <label for="Image_url" id="image-url">Image Url</label>
+                </div>
             </div>
             <!-- submit button -->
             <div class="row">
                 <div class="col s12 center-align">
-                <button type="submit" class="btn-large orange lighten-2 text-shadow">
+                <button type="submit" class="btn-large green text-shadow">
                     Add Recipe <i class="fas fa fa-plus-square right"></i>
                 </button>    
                 </div>        
