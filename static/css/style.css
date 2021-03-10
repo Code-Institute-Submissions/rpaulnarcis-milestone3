@@ -121,7 +121,7 @@
     width: fit-content;
 }
 
-a.waves-effect.waves-light.btn-large.light-blue.darken-4{
+a.waves-effect.waves-light.btn-large.green.darken-3{
     width: 100%;
 }
 
@@ -139,4 +139,34 @@ p.s-card{
 
 .container-follow .fa-4x{
     margin: 5px 10px;
+}
+
+.divider.index{
+    margin-top: 100px;
+}
+
+.card.index{
+    width: 30%;
+    height: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect*/
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    background-color: #f1f1f1;
+}
+
+.card-title-index{
+    font-weight: 100;
+}
+
+.col.s4.index{
+    display:contents;
+    width: 30%;
+    height: 500px;
+    float: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect*/
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    background-color: #f1f1f1;
 }
