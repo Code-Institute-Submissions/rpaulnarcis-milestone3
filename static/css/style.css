@@ -8,47 +8,51 @@
 
 #recipe-name{
     font-size: 25px;
-    color:#ffb74d;
+    color:#4caf50;
 }
 
 #recipe-category{
     font-size: 25px;
-    color:#ffb74d;
+    color:#4caf50;
 }
 
 #short-discription{
     font-size: 25px;
-    color:#ffb74d;
+    color:#4caf50;
 }
 
 #ingredient{
     font-size: 25px;
-    color:#ffb74d;
+    color:#4caf50;
 }
 
 #steps{
    font-size: 25px;
-   color:#ffb74d;
+   color:#4caf50;
 }
 
 #prep_time{
    font-size: 25px;
-   color:#ffb74d;
+   color:#4caf50;
 }
 
 #cooking-time{
    font-size: 25px;
-   color:#ffb74d;
+   color:#4caf50;
 }
 
 #image-url{
    font-size: 25px;
-   color:#ffb74d;
+   color:#4caf50;
 }
 
 #categories{
    font-size: 20px;
-   color:#ffb74d;
+   color:#4caf50;
+}
+
+.login {
+    color: #4caf50;
 }
 
 #cat{
