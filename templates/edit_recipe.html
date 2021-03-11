@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="green-text text-darken-10 center-align">Edit Recipe</h3>
+
+    <div class="row card-pannel grey lighten-5">
+        <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+            <!--category selection -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <select id="category_name" name="category_name" class="validate" required>
+                        <option value="" disabled selected>Choose Category</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+                        <label id="category_name">Category</label>
+                </div>
+            </div>
+            <!-- recipe name -->
+            <div class="row">
+                <div class=" input-field col s12 ">
+                    <input placeholder="Recipe Name." id="recipe_name" name="recipe_name"
+                        minlength="5" maxlength="50" type="text" required>
+                    <label for="first_name" id="recipe-name">{{ recipe.recipe_name }}</label>
+                </div>
+            </div>
+            <!-- short discription-->
+            <div class="row">           
+                <div class="input-field col s12">
+                    <textarea placeholder="Please weite a short discription(250 characters max)" name="recipe_short_description"
+                        minlength="5" maxlength="300"  id="recipe_short_description"
+                        class="materialize-textarea" required></textarea>
+                    <label for="textarea1" id="short-discription">{{ recipe.recipe_short_description }}</label>
+                </div>
+            </div>
+            <!-- ingredients -->
+            <div class="row">    
+                <div class="input-field col s12">
+                    <textarea placeholder="Please list each ingredient in its's own line." name="recipe_ingredients"
+                          id="Ingredient"
+                        class="materialize-textarea" required></textarea>
+                    <label for="textarea1" id="ingredient">{{recipe.recipe_ingredients}}</label>
+                </div>
+            </div>
+            <!-- steps -->
+            <div class="row">    
+                <div class="input-field col s12">
+                    <textarea placeholder="Please number each step and write it on it's own line."
+                        name="recipe_steps"  id="Direction"
+                        class="materialize-textarea" required></textarea>
+                    <label for="textarea1" id="steps">{{ recipe.recipe_steps }}</label>
+                </div>
+            </div>
+            <!-- prep time -->
+            <div class="row">    
+                <div class="input-field col s12">
+                    <input placeholder="Prep Time." id="Prep_time" name="recipe_prep_time"
+                         minlength="5" maxlength="50" type="text" required>
+                    <label for="prep_time" id="prep_time">{{ recipe.recipe_prep_time }}</label>
+                </div>
+            </div>
+            <!-- cooking time -->
+            <div class="row">    
+                <div class="input-field col s12">
+                    <input placeholder="Cooking Time." id="Cooking_time" type="text" name="recipe_cooking_time"
+                         minlength="5" maxlength="50" class="validate" required>
+                    <label for="Cooking_time" id="cooking-time">{{ recipe.recipe_cooking_time }}</label>
+                </div>
+            </div>
+            <!-- image url -->
+            <div class="row">    
+                <div class="input-field col s12">
+                    <input placeholder="Recipe URL." id="Image-url" type="text" name="recipe_image_url" 
+                        class="validate" required>
+                    <label for="Image_url" id="image-url">{{ recipe.recipe_image_url }}</label>
+                </div>
+            </div>
+            <!-- submit button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                <button type="submit" class="btn-large green text-shadow">
+                    Edit Recipe <i class="fas fa-edit right"></i>
+                </button>    
+                </div>        
+            </div>
+        </form>
+    </div>
+
+
+{% endblock %}

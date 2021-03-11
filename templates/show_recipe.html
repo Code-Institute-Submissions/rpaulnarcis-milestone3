@@ -54,7 +54,7 @@
 </div>
 <div class="row">
     <div class="col s6">
-        <a href="" class="waves-effect waves-light btn-large green darken-3">Edit</a>
+        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light btn-large green darken-3">Edit</a>
     </div>
     <div class="col s6">
         <a href="" class="waves-effect waves-light btn-large red">Delete</a>
