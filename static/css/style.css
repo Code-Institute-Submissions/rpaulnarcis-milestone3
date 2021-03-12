@@ -194,3 +194,91 @@ p.s-card{
     margin-top: 30px;
     margin-bottom: 60px;
 }
+
+.divider.one {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.divider.two {
+    margin-bottom: 20px;
+}
+
+.divider.three {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.divider.four {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.col.s3 {
+    border: 1px solid #CCCCCC;
+    height: 300px;
+    line-height: 400px;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+}
+
+.corner-link {
+  -webkit-transform: rotate(-45deg);  
+     -moz-transform: rotate(-45deg); 
+      -ms-transform: rotate(-45deg); 
+       -o-transform: rotate(-45deg); 
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 0 0;
+     -moz-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+       -o-transform-origin: 0 0;
+          transform-origin: 0 0;
+    right: 0;
+    top: 0;
+    display: block;
+    height: 150px;
+    position: absolute;
+    width: 100px;
+    z-index: 3;
+}
+.corner-text-wrapper {
+  -webkit-transform: rotate(45deg);  
+     -moz-transform: rotate(45deg);  
+      -ms-transform: rotate(45deg);  
+       -o-transform: rotate(45deg);  
+          transform: rotate(45deg);
+    clip: rect(0px, 141.421px, 70.7107px, 0px);
+    height: 141.421px;
+    position: absolute;
+    right: -20.7107px;
+    top: -20.7107px;
+    width: 141.421px;
+    z-index: 1;
+}
+.corner-text {
+  color: white;
+ -webkit-transform: rotate(-45deg);  
+     -moz-transform: rotate(-45deg); 
+      -ms-transform: rotate(-45deg); 
+       -o-transform: rotate(-45deg); 
+          transform: rotate(-45deg);
+    left: 20px;
+    top: 20px;
+    background-color: rgb(11, 173, 11);
+    display: block;
+    height: 100px;
+    position: absolute;
+    width: 100px;
+    z-index: 2;
+}
+.corner-text span {
+  position: relative;
+  font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 700;
+  top: -185px;
+  left: 10px;
+  display: block;
+  text-align: center;
+}
