@@ -89,6 +89,7 @@
 
 .recipe.divider{
     margin-top: 100px;
+    margin-bottom: 40px;
    
 }
 
@@ -125,7 +126,7 @@
     width: fit-content;
 }
 
-a.waves-effect.waves-light.btn-large.green.darken-3{
+a.waves-effect.waves-light.btn-large.green{
     width: 100%;
 }
 
@@ -177,4 +178,19 @@ p.s-card{
 
 .btn-large {
     margin: 5px;
+}
+
+.divider.all-recipes {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.divider.show-bottom.black {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.divider.add.black {
+    margin-top: 30px;
+    margin-bottom: 60px;
 }

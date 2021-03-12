@@ -1,4 +1,5 @@
 import os
+from os import path
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -24,7 +25,7 @@ def Home():
     return render_template(
         "index.html")
 
-
+# display all recpies
 @app.route("/recipes")
 def recipes():
     query = request.args.get("query")
@@ -38,6 +39,15 @@ def recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = mongo.db.recipes.find(
+            {"$text": {"$search": query}}).limit(10)
+    return render_template("recipes.html", recipes=recipes)
+
+
+# display full recpie
 @app.route('/show_recipe/<recipe_id>')
 def show_recipe(recipe_id):
     my_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
@@ -47,7 +57,7 @@ def show_recipe(recipe_id):
     return render_template(
         'show_recipe.html', recipe=my_recipe, categories=all_categories)
 
-
+# register user
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -70,7 +80,7 @@ def register():
             "profile", username=session["user"]))
     return render_template("register.html")
 
-
+# login user
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -99,7 +109,7 @@ def login():
 
     return render_template("login.html")
 
-
+# user profile
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
@@ -111,7 +121,7 @@ def profile(username):
 
     return redirect(url_for("login"))
 
-
+#logout user
 @app.route("/logout")
 def logout():
     # remover user from session cookies
@@ -119,7 +129,7 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
-
+# add a recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -143,7 +153,7 @@ def add_recipe():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
 
-
+# edit existing recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -167,7 +177,7 @@ def edit_recipe(recipe_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
-
+# delete a recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})

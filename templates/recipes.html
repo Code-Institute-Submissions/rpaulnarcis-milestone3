@@ -2,23 +2,28 @@
 {% block content %}
 
 <!---Page to display recipe when recipe is clicked-->
-<section>
+
     <h3 class="center-align green-text">Recipes</h3>
-    <div class="container search">
-        <nav>
-            <div class="nav-wrapper green">
-                <form method="GET" action="{{ url_for('recipes') }}">
-                    <div class="input-field">
-                        <input id="search" type="search" required>
-                        <label for="search"><i class="material-icons">search</i></label>
-                        <!-- I've put "red-text" class to emphasize -->
-                        <i class="material-icons red-text">close</i>
-                    </div>
-                </form>
+
+    <div class="row card-panel grey lighten-5">
+        <form action="{{ url_for('search')}}" method="post" class="col s12">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s12 m8">
+                    <i class="fas fa-search prefix green-text"></i>
+                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
+                    <label for="query">Search Recipe</label>
+                </div>
+                <div class="col s12 m4">
+                    <a href="{{ url_for('recipes')}}" class="red btn text-shadow">Reset</a>
+                    <button type="submit" class="green darken-2 btn text-shadow">
+                        <i class="fas fa-search left"></i> Search
+                    </button>
+                </div>
             </div>
-        </nav>
+        </form>
     </div>
-</section>    
+
+<div class="divider all-recipes black"></div>    
     <section id="recipe-card">
 <div class="fist">        
         {% if recipes.count() %} {% for recipe in recipes %}
@@ -34,13 +39,6 @@
                 </div>
                 <h5 class="card-title">{{recipe.recipe_name}}</h5>
                 <p class="card-content">{{recipe.recipe_short_description}}</p>
-                <span class="edit_span text-center">
-                    {% if recipe.added_on %}
-                    <small class="text-muted">Added on: {{recipe.added_on}}</small>
-                    {% else %}
-                    <small class="text-muted center-align">Last Updated: {{recipe.last_update}}</small>
-                    {% endif %}
-                </span>
                 <div class="card-action">
                     <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}" class="center-align">View recipe</a>
                 </div>
@@ -54,7 +52,7 @@
     {% endif %}
 <div class="row">
 <div class="col s12">
-<div class="recipe divider"></div>
+<div class="recipe divider black"></div>
 </div>
 </div> 
 
