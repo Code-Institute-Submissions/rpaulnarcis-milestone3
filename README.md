@@ -5,7 +5,7 @@ MileStone README.md
 
 Welcome! [View live project here]
 
-Milestone Project 3 Home Page<img src="http://robert-the-cookbook.herokuapp.com/">
+Milestone Project 3 Home Page(<img src="http://robert-the-cookbook.herokuapp.com/">)
 
 ### **UX - User Experience Design:**
 This website was created for Goals
