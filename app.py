@@ -137,9 +137,9 @@ def add_recipe():
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_short_description": request.form.get(
-                "recipe_short_description"),
+            "recipe_short_description"),
             "recipe_ingredients": request.form.get(
-                "recipe_ingredients"),
+            "recipe_ingredients"),
             "recipe_steps": request.form.get("recipe_steps"),
             "recipe_prep_time": request.form.get("recipe_prep_time"),
             "recipe_cooking_time": request.form.get("recipe_cooking_time"),
@@ -161,9 +161,9 @@ def edit_recipe(recipe_id):
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_short_description": request.form.get(
-                "recipe_short_description"),
+            "recipe_short_description"),
             "recipe_ingredients": request.form.get(
-                "recipe_ingredients"),
+            "recipe_ingredients"),
             "recipe_steps": request.form.get("recipe_steps"),
             "recipe_prep_time": request.form.get("recipe_prep_time"),
             "recipe_cooking_time": request.form.get("recipe_cooking_time"),
@@ -188,4 +188,4 @@ def delete_recipe(recipe_id):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)

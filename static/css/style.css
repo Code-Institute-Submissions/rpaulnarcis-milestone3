@@ -302,9 +302,6 @@ p.s-card{
 
 @media only screen (max-width 768px:) and (mix-width 320px:) { 
 
-ul.slides{
-    height: 30%;
-}
 
 section.slider {
     height: 30%px;

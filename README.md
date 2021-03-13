@@ -5,7 +5,7 @@ MileStone README.md
 
 Welcome! [View live project here]
 
-Milestone Project Home Page<img src="#">
+Milestone Project 3 Home Page<img src="http://robert-the-cookbook.herokuapp.com/">
 
 ### **UX - User Experience Design:**
 This website was created for Goals
@@ -140,11 +140,13 @@ Add Recipes Page <img src="static/Images/Add Recipe.png">
 #### Syntax - HTML & CSS
 <i class="far fa-clone"></i> Using https://validator.w3.org and filtering errors related to Angular (ex: no doctype,...)
 - index.html (Home) &check;
-- .html &check;
-- .html &check;
-- .html &check;
-
-
+- Login.html &check;
+- register.html &check;
+- Recipes.html &check;
+- show_recipie.html &check;
+- profile.html &check;
+- edit.html &check;
+- logout.html &check;
 <i class="far fa-clone"></i> Using https://jigsaw.w3.org/css-validator/ I validated the following spreadsheet:
 
 - defaultStylesheet.css: &check;
@@ -161,8 +163,8 @@ Add Recipes Page <img src="static/Images/Add Recipe.png">
 #### Known Bugs and fixes
 -the base template slider was not present on all template pages so I created a second one called slider to facilitate these pages.
 -I also got a lot of trouble in trying to achieve responsiveness on smaller devices using materializecss.
--
-
+-Many errors came up when I checked my HTML was not quite sure if it was good or bad many of them seem to be from the python components I reached out to the tutors for advice but there was no response.
+-I could latch on to the recipes for loop on the recipes page to apply propper CSS so as a result, my responsiveness on smaller devices suffered.
 ### **Deployment:**
 - This project was built using Gitpod IDE, committed, and published using GitHub.
 
@@ -183,7 +185,7 @@ Note: You will need to create a free MongoDB account and create your collection.
 - os.environ['MONGO_URI'] = 
 - os.environ['SECRET_KEY'] = 
 #### Deployment Process
-Heroku deployment
+  Heroku deployment
 - Heroku was used to deploy this project with the following steps.
 
 - Logged in to Heroku.
