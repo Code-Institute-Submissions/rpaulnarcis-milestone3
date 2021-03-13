@@ -3,9 +3,9 @@ MileStone README.md
 ### ** Milestone 3 Project**
 
 
-Welcome! [View live project here]
+Welcome! [View live project here](http://robert-the-cookbook.herokuapp.com/)
 
-Milestone Project 3 Home Page![View live project here](http://robert-the-cookbook.herokuapp.com/)
+Milestone Project 3 Home Page![View live project here]<img src="static/Images/MS3.png">
 
 
 ### **UX - User Experience Design:**
