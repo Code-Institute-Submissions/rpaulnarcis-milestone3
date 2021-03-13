@@ -65,386 +65,57 @@
   background-position: center;
 }
 
-.card {
-    width: 30%;
-    height: 500px;
-    float: left;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect*/
-    margin-bottom: 30px;
-    margin-top: 30px;
-    margin-left: 30px;
-    background-color: #f1f1f1;
-}
-
-.card-img-top{
-    height: 280px;
-}
-
-
-
-.card-image{
-    height: 280px; /* Your height here */
-    overflow: hidden;
-}
-
-.recipe.divider{
-    margin-top: 80px;
-    margin-bottom: 50px;
-   
-}
-
-.container.search{
-    width:500px;
-}
-
-.material-icons{
+@media only screen and (min-width : 320px) { 
+a.brand-logo {
     font-size: 20px;
 }
-.divider.show{
-    margin-top: 20px;    
-}
 
-.card.show{
-    width:370px;
-    height: 200px;
-}
-
-
-.show.header.center-align{
-    margin-top: 20px;
-}
-
-.show-header.divider{
-    margin-top: 50px;
-}
-
-.card.blue-grey.darken-1{
-    width: fit-content;
-}
-
-.card.grey.lighten-1{
-    width: fit-content;
-}
-
-a.waves-effect.waves-light.btn-large.green{
-    width: 100%;
-}
-
-a.waves-effect.waves-light.btn-large.red{
-    width: 100%;
-}
-
-p.i-card{
-    white-space: pre-wrap;
-}
-
-p.s-card{
-    white-space: pre-line;
-}
-
-.container-follow .fa-4x{
-    margin: 5px 10px;
-}
-
-.divider.index{
-    margin-top: 100px;
-}
-
-.card.index{
-    width: 30%;
-    height: 500px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect*/
-    margin-bottom: 30px;
-    margin-top: 30px;
-    margin-left: 30px;
-    background-color: #f1f1f1;
-}
-
-.card-title-index{
-    font-weight: 100;
-}
-
-.col.s12.m4.l3.index.index{
-    display:contents;
-    width: 30%;
-    height: 500px;
-    float: left;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect*/
-    margin-bottom: 30px;
-    margin-top: 30px;
-    margin-left: 30px;
-    background-color: #f1f1f1;
-}
-
-.btn-large {
-    margin: 5px;
-}
-
-.divider.all-recipes {
-    margin-top: 60px;
-    margin-bottom: 20px;
-}
-
-.divider.show-bottom {
-    margin-top: 30px;
-    margin-bottom: 40px;
-}
-
-.divider.add {
-    margin-top: 30px;
-    margin-bottom: 60px;
-}
-
-.divider.one {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.divider.two {
-    margin-bottom: 20px;
-}
-
-.divider.three {
-    margin-top: 40px;
-    margin-bottom: 50px;
-}
-
-.divider.four {
-    margin-top: 20px;
-    margin-bottom: 70px;
-}
-
- .col.s12.m6.l3{
-    border: 1px solid #CCCCCC;
-    height: 300px;
-    line-height: 400px;
-    margin: 50px auto;
-    overflow: hidden;
-    position: relative;
-    width: 25%;
-}
-
-.corner-link {
-    -webkit-transform: rotate(-45deg);  
-    -moz-transform: rotate(-45deg); 
-    -ms-transform: rotate(-45deg); 
-    -o-transform: rotate(-45deg); 
-    transform: rotate(-45deg);
-    -webkit-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
-    -ms-transform-origin: 0 0;
-    -o-transform-origin: 0 0;
-    transform-origin: 0 0;
-    right: 0;
-    top: 0;
-    display: block;
-    height: 150px;
-    position: absolute;
-    width: 80px;
-    z-index: 3;
-}
-.corner-text-wrapper {
-    -webkit-transform: rotate(45deg);  
-    -moz-transform: rotate(45deg);  
-    -ms-transform: rotate(45deg);  
-    -o-transform: rotate(45deg);  
-    transform: rotate(45deg);
-    clip: rect(0px, 141.421px, 70.7107px, 0px);
-    height: 141.421px;
-    position: absolute;
-    right: -20.7107px;
-    top: -20.7107px;
-    width: 141.421px;
-    z-index: 1;
-}
-.corner-text {
-    color: white;
-    -webkit-transform: rotate(-45deg);  
-    -moz-transform: rotate(-45deg); 
-    -ms-transform: rotate(-45deg); 
-    -o-transform: rotate(-45deg); 
-    transform: rotate(-45deg);
-    left: 20px;
-    top: 20px;
-    background-color: rgb(11, 173, 11);
-    display: block;
-    height: 100px;
-    position: absolute;
-    width: 100px;
-    z-index: 2;
-    font-size: 13px;
-}
-.corner-text span {
-    position: relative;
-    font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: 700;
-    top: -185px;
-    left: 10px;
-    display: block;
-    text-align: center;
-}
-
-.green-text.text-darken-10.center-align.text-shadow {
-    margin-bottom: 40px;
-}
-
-.center-align.green-text.text-shadow {
-    margin-bottom: 40px;
-}
-
-.center-align.green-text.text-shadow {
-    margin-bottom: 40px;
-}
-
-.divider.regester {
-    margin-bottom: 320px;
-}
-
-@media only screen (max-width 768px:) and (mix-width 320px:) { 
-
-
-section.slider {
-    height: 30%px;
-}
-
-a.brand-logo {
-    font-size: 20px;;
-}
-
-h3.center-align.green-text.text-shadow {
+h2{
     font-size: 35px;
 }
 
-.col.s3 {
-    display: col s1; 
+h4{
+    font-size: 30px;
+}
+h3.center-align.green-text {
+    font-size: 35px;
 }
 
-.col.s12.m6.l3{
-    border: 1px solid #CCCCCC;
-    height: 300px;
-    line-height: 400px;
-    margin: 0px auto;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+h3.green-text.text-darken-10.center-align {
+    font-size: 30px;
 }
+
+} 
+@media only screen and (min-width : 375px) {
 
 .divider.one {
     display: none;
 }
 
-.divider.four {
-    display: none;
+h2{
+    font-size: 45px;
 }
 
-.card {
-    width: 100%;
-    height: 500px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    margin-left: 0px;
-    background-color: #f1f1f1;
+h4{
+    font-size: 35px;
 }
 
-.container-follow.fa-4x  {
-    margin: 0px;
-}
-
-.row.index {
-    margin-bottom: 0px;
-}   
-
-.fab {
-     font-size: 45px;
-}
-
-.caption.center-align.white-text.text-shadow.\34 {
-    font-size: 10px;
-}
-
-h2 {
-    font-size: 30px;
-}
-
-h4 {
+a.brand-logo {
     font-size: 25px;
 }
 
-.card.show {
-    overflow: hidden;
+h3.green-text.text-darken-10.center-align {
+    font-size: 25px;
 }
 
-.col.s6.offset-s4.center-align {
-    margin: 0;
-    overflow: hidden;
-}
-
-.col.s5.pull-s7 {
-    display: contents;
-}
-
-.col.s7.push-s5{
-     display: contents;
-}
-
-.col.s6.offset-s4.center-align {
-    width: 100%;
-    padding-left: 0px;
-}
-
-.show-header.divider {
-    margin-top: 5px;
-}
-
-h3.center-align.green-text {
-    font-size: 30px;
+.col.s12.m6.l3 {
+    margin-right: 9px;
+    padding-left: 43px;
 }
 
 .col.s12.m8.offset-m2 {
-    margin-bottom: 120px;
+    margin-bottom: 200px;
 }
 
-h3.green-text.text-darken-10.center-align.text-shadow {
-    font-size: 30px;
-}
 
-main.container {
-    display: contents;
-}
-
-.card {
-    margin-top: 30px;
-    display:ruby-base-container;
-        
-}
-
-.divider.all-recipes {
-    display: none;
-}
-
-.recipe.divider {
-    display: none;
-}
-
-.card.home {
-    margin-top: 0px;
-}
-
-.card.home1 {
-    margin-bottom: 10px;
-    margin-top: 0px;
-}
-
-.divider.show-bottom {
-    display: none;
-}
-
-.row.button {
-    width:55%;
-    
-}
-
-.c.card {
-    margin-top: 0;
-}
 }
