@@ -225,16 +225,16 @@ p.s-card{
 }
 
 .corner-link {
-  -webkit-transform: rotate(-45deg);  
-     -moz-transform: rotate(-45deg); 
-      -ms-transform: rotate(-45deg); 
-       -o-transform: rotate(-45deg); 
-          transform: rotate(-45deg);
-  -webkit-transform-origin: 0 0;
-     -moz-transform-origin: 0 0;
-      -ms-transform-origin: 0 0;
-       -o-transform-origin: 0 0;
-          transform-origin: 0 0;
+    -webkit-transform: rotate(-45deg);  
+    -moz-transform: rotate(-45deg); 
+    -ms-transform: rotate(-45deg); 
+    -o-transform: rotate(-45deg); 
+    transform: rotate(-45deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
     right: 0;
     top: 0;
     display: block;
@@ -244,11 +244,11 @@ p.s-card{
     z-index: 3;
 }
 .corner-text-wrapper {
-  -webkit-transform: rotate(45deg);  
-     -moz-transform: rotate(45deg);  
-      -ms-transform: rotate(45deg);  
-       -o-transform: rotate(45deg);  
-          transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);  
+    -moz-transform: rotate(45deg);  
+    -ms-transform: rotate(45deg);  
+    -o-transform: rotate(45deg);  
+    transform: rotate(45deg);
     clip: rect(0px, 141.421px, 70.7107px, 0px);
     height: 141.421px;
     position: absolute;
@@ -258,12 +258,12 @@ p.s-card{
     z-index: 1;
 }
 .corner-text {
-  color: white;
- -webkit-transform: rotate(-45deg);  
-     -moz-transform: rotate(-45deg); 
-      -ms-transform: rotate(-45deg); 
-       -o-transform: rotate(-45deg); 
-          transform: rotate(-45deg);
+    color: white;
+    -webkit-transform: rotate(-45deg);  
+    -moz-transform: rotate(-45deg); 
+    -ms-transform: rotate(-45deg); 
+    -o-transform: rotate(-45deg); 
+    transform: rotate(-45deg);
     left: 20px;
     top: 20px;
     background-color: rgb(11, 173, 11);
@@ -275,13 +275,13 @@ p.s-card{
     font-size: 13px;
 }
 .corner-text span {
-  position: relative;
-  font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 700;
-  top: -185px;
-  left: 10px;
-  display: block;
-  text-align: center;
+    position: relative;
+    font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 700;
+    top: -185px;
+    left: 10px;
+    display: block;
+    text-align: center;
 }
 
 .green-text.text-darken-10.center-align.text-shadow {
@@ -300,12 +300,11 @@ p.s-card{
     margin-bottom: 320px;
 }
 
-@media only screen and (min-width : 320px) { 
+@media only screen (max-width 768px:) and (mix-width 320px:) { 
 
 ul.slides{
     height: 30%;
 }
-
 
 section.slider {
     height: 30%px;
@@ -350,7 +349,7 @@ h3.center-align.green-text.text-shadow {
     background-color: #f1f1f1;
 }
 
-.container-follow .fa-4x  {
+.container-follow.fa-4x  {
     margin: 0px;
 }
 
@@ -361,7 +360,6 @@ h3.center-align.green-text.text-shadow {
 .fab {
      font-size: 45px;
 }
-
 
 .caption.center-align.white-text.text-shadow.\34 {
     font-size: 10px;
@@ -376,10 +374,6 @@ h4 {
 }
 
 .card.show {
-    overflow: hidden;
-}
-
-.dody {
     overflow: hidden;
 }
 
@@ -422,14 +416,38 @@ main.container {
 }
 
 .card {
-    margin-top: 50px;
+    margin-top: 30px;
     display:ruby-base-container;
-    
-    
+        
 }
 
 .divider.all-recipes {
     display: none;
 }
 
-} // Custom, iPhone 4 & 5
+.recipe.divider {
+    display: none;
+}
+
+.card.home {
+    margin-top: 0px;
+}
+
+.card.home1 {
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.divider.show-bottom {
+    display: none;
+}
+
+.row.button {
+    width:55%;
+    
+}
+
+.c.card {
+    margin-top: 0;
+}
+}

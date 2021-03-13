@@ -1,115 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
-        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" type="text/css">
-    <script data-ad-client="ca-pub-7869121334766101" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" type="text/css">
+    <script data-ad-client="ca-pub-7869121334766101" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" type="text/css">
     {% block styles %}
-    {% endblock %} 
+    {% endblock %}
     <title>The Cookbook</title>
 </head>
 <body>
-
     <header>
         <!-- top navbar -->
-         <nav class="nav-extended text-shadow green">
+        <nav class="nav-extended text-shadow green">
             <div class="nav-wrapper">
-            <a href="{{ url_for('Home')}}" class="brand-logo">The Cookbook</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="{{ url_for('Home')}}">Home</a></li>
-                {% if session.user %}
-                <li><a href="{{ url_for('recipes')}}">Recipes</a></li>
-                <li><a href="{{ url_for('add_recipe')}}">Add Recipe</a></li>
-                <li><a href="{{ url_for('profile', username=session['user'])}}"></a></li>
-                <li><a href="{{ url_for('logout')}}">Log Out</a></li>
-            {% else%}
-                <li><a href="{{ url_for('login')}}">Log In</a></li>
-                <li><a href="{{ url_for('register')}}">Register</a></li>
-            {% endif %}
-            </ul>
+                <a href="{{ url_for('Home')}}" class="brand-logo">The Cookbook</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('Home')}}">Home</a></li>
+                    {% if session.user %}
+                    <li><a href="{{ url_for('recipes')}}">Recipes</a></li>
+                    <li><a href="{{ url_for('add_recipe')}}">Add Recipe</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user'])}}"></a></li>
+                    <li><a href="{{ url_for('logout')}}">Log Out</a></li>
+                    {% else%}
+                    <li><a href="{{ url_for('login')}}">Log In</a></li>
+                    <li><a href="{{ url_for('register')}}">Register</a></li>
+                    {% endif %}
+                </ul>
             </div>
         </nav>
-
         <!-- mobile sidenavbar-->
         <ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align green-text">The Cookbook</h4></li>
+            <li>
+                <h4 class="center-align green-text">The Cookbook</h4>
+            </li>
             <li><a href="{{ url_for('Home')}}">Home</a></li>
-             <li><a href="{{ url_for('recipes')}}">Recipe</a></li>
-             <li><a href="#">Show Recipe</a></li>
             {% if session.user %}
-                <li><a href="{{ url_for('profile', username=session['user'])}}">Profile</a></li>
-               
-                <li><a href="{{ url_for('add_recipe')}}">Add Recipe</a></li>
-                <li><a href="{{ url_for('logout')}}">Log Out</a></li>
+            <li><a href="{{ url_for('profile', username=session['user'])}}">Profile</a></li>
+            <li><a href="{{ url_for('recipes')}}">Recipe</a></li>
+            <li><a href="{{ url_for('add_recipe')}}">Add Recipe</a></li>
+            <li><a href="{{ url_for('logout')}}">Log Out</a></li>
             {% else%}
-                <li><a href="{{ url_for('login')}}">Log In</a></li>
-                <li><a href="{{ url_for('register')}}">Register</a></li>
+            <li><a href="{{ url_for('login')}}">Log In</a></li>
+            <li><a href="{{ url_for('register')}}">Register</a></li>
             {% endif %}
         </ul>
     </header>
-
-    <div class="row">   
-<section class="slider">
-    <div class="slider col s12">
-    <ul class="slides">
-      <li>
-        <img class="img-slider" src="static/Images/peppers.jpg">
-        <div class="caption center-align white-text text-shadow 4">
-          <h2>Cooking is a therapy for the soul</h2>
-          <h4 class="light white-text text-shadow 4">Explore the foodie in you</h4>
-        </div>
-      </li>
-      <li>
-        <img class="img-slider" src="static/Images/spicy-grilled-shrimp.jpg">
-        <div class="caption left-align white-text text-shadow 4">
-          <h2>There is nothing as creative as cooking</h2>
-          <h4 class="light white-text text-shadow 4">Let the foodie do the work</h4>
-        </div>
-      </li>
-      <li>
-        <img class="img-slider" src="static/Images/Peanut Stew with Chicken.jpg">
-        <div class="caption right-align white-text text-shadow 4">
-          <h2>An endless journey of aroma</h2>
-          <h4 class="light white-text text-shadow 4">The finest flavors explored</h4>
-        </div>
-      </li>
-      <li>
-        <img class="img-slider" src="static/Images/vege1.jpg">
-        <div class="caption center-align white-text text-shadow 4">
-          <h3>Have intimate sessions with yourself</h3>
-          <h4 class="light white-text text-shadow 4">Cook, eat, repeat</h4>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-</div>
-
-
+    <div class="row">
+        <section class="slider">
+            <div class="slider col s12">
+                <ul class="slides">
+                    <li>
+                        <img class="img-slider" src="static/Images/peppers.jpg">
+                        <div class="caption center-align white-text text-shadow 4">
+                            <h2>Cooking is a therapy for the soul</h2>
+                            <h4 class="light white-text text-shadow 4">Explore the foodie in you</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img-slider" src="static/Images/spicy-grilled-shrimp.jpg">
+                        <div class="caption left-align white-text text-shadow 4">
+                            <h2>There is nothing as creative as cooking</h2>
+                            <h4 class="light white-text text-shadow 4">Let the foodie do the work</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img-slider" src="static/Images/Peanut Stew with Chicken.jpg">
+                        <div class="caption right-align white-text text-shadow 4">
+                            <h2>An endless journey of aroma</h2>
+                            <h4 class="light white-text text-shadow 4">The finest flavors explored</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <img class="img-slider" src="static/Images/vege1.jpg">
+                        <div class="caption center-align white-text text-shadow 4">
+                            <h3>Have intimate sessions with yourself</h3>
+                            <h4 class="light white-text text-shadow 4">Cook, eat, repeat</h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
     <section>
         <!-- flash message -->
         {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="green-text lighting-4 center-align text-shadow -4">{{ message }}</h4>
-                    </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes">
+            <h4 class="green-text lighting-4 center-align">{{ message }}</h4>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
     </section>
-    
     <main class="container">
         {% block content %}
         {% endblock %}
     </main>
-
     <footer class="page-footer green center">
         <div class="container container-follow">
             <div class="row">
@@ -138,7 +135,6 @@
         <div class="footer-copyright green darken-3 text-shadow">
             <div class="container ">
                 © All rights reserved 2021
-                
             </div>
         </div>
     </footer>
@@ -149,4 +145,5 @@
     {% block scripts%}
     {% endblock %}
 </body>
+
 </html>

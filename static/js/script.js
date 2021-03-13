@@ -5,3 +5,5 @@ M.Slider.init(slider, {
     transition: 500,
     interval: 6000
 });
+
+
