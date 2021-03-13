@@ -88,8 +88,8 @@
 }
 
 .recipe.divider{
-    margin-top: 100px;
-    margin-bottom: 40px;
+    margin-top: 80px;
+    margin-bottom: 50px;
    
 }
 
@@ -100,7 +100,7 @@
 .material-icons{
     font-size: 20px;
 }
-.divider.show.black{
+.divider.show{
     margin-top: 20px;    
 }
 
@@ -164,7 +164,7 @@ p.s-card{
     font-weight: 100;
 }
 
-.col.s4.index{
+.col.s12.m4.l3.index.index{
     display:contents;
     width: 30%;
     height: 500px;
@@ -185,12 +185,12 @@ p.s-card{
     margin-bottom: 20px;
 }
 
-.divider.show-bottom.black {
+.divider.show-bottom {
     margin-top: 30px;
     margin-bottom: 40px;
 }
 
-.divider.add.black {
+.divider.add {
     margin-top: 30px;
     margin-bottom: 60px;
 }
@@ -211,17 +211,17 @@ p.s-card{
 
 .divider.four {
     margin-top: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
-.col.s3 {
+ .col.s12.m6.l3{
     border: 1px solid #CCCCCC;
     height: 300px;
     line-height: 400px;
     margin: 50px auto;
     overflow: hidden;
     position: relative;
-    width: 80%;
+    width: 25%;
 }
 
 .corner-link {
@@ -240,7 +240,7 @@ p.s-card{
     display: block;
     height: 150px;
     position: absolute;
-    width: 100px;
+    width: 80px;
     z-index: 3;
 }
 .corner-text-wrapper {
@@ -272,6 +272,7 @@ p.s-card{
     position: absolute;
     width: 100px;
     z-index: 2;
+    font-size: 13px;
 }
 .corner-text span {
   position: relative;
@@ -282,3 +283,153 @@ p.s-card{
   display: block;
   text-align: center;
 }
+
+.green-text.text-darken-10.center-align.text-shadow {
+    margin-bottom: 40px;
+}
+
+.center-align.green-text.text-shadow {
+    margin-bottom: 40px;
+}
+
+.center-align.green-text.text-shadow {
+    margin-bottom: 40px;
+}
+
+.divider.regester {
+    margin-bottom: 320px;
+}
+
+@media only screen and (min-width : 320px) { 
+
+ul.slides{
+    height: 30%;
+}
+
+
+section.slider {
+    height: 30%px;
+}
+
+a.brand-logo {
+    font-size: 20px;;
+}
+
+h3.center-align.green-text.text-shadow {
+    font-size: 35px;
+}
+
+.col.s3 {
+    display: col s1; 
+}
+
+.col.s12.m6.l3{
+    border: 1px solid #CCCCCC;
+    height: 300px;
+    line-height: 400px;
+    margin: 0px auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.divider.one {
+    display: none;
+}
+
+.divider.four {
+    display: none;
+}
+
+.card {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    background-color: #f1f1f1;
+}
+
+.container-follow .fa-4x  {
+    margin: 0px;
+}
+
+.row.index {
+    margin-bottom: 0px;
+}   
+
+.fab {
+     font-size: 45px;
+}
+
+
+.caption.center-align.white-text.text-shadow.\34 {
+    font-size: 10px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+.card.show {
+    overflow: hidden;
+}
+
+.dody {
+    overflow: hidden;
+}
+
+.col.s6.offset-s4.center-align {
+    margin: 0;
+    overflow: hidden;
+}
+
+.col.s5.pull-s7 {
+    display: contents;
+}
+
+.col.s7.push-s5{
+     display: contents;
+}
+
+.col.s6.offset-s4.center-align {
+    width: 100%;
+    padding-left: 0px;
+}
+
+.show-header.divider {
+    margin-top: 5px;
+}
+
+h3.center-align.green-text {
+    font-size: 30px;
+}
+
+.col.s12.m8.offset-m2 {
+    margin-bottom: 120px;
+}
+
+h3.green-text.text-darken-10.center-align.text-shadow {
+    font-size: 30px;
+}
+
+main.container {
+    display: contents;
+}
+
+.card {
+    margin-top: 50px;
+    display:ruby-base-container;
+    
+    
+}
+
+.divider.all-recipes {
+    display: none;
+}
+
+} // Custom, iPhone 4 & 5

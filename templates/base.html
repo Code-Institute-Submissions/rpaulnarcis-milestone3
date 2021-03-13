@@ -38,7 +38,7 @@
 
         <!-- mobile sidenavbar-->
         <ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align orange-text text-darken-10">The Cookbook</h4></li>
+            <li><h4 class="center-align green-text">The Cookbook</h4></li>
             <li><a href="{{ url_for('Home')}}">Home</a></li>
              <li><a href="{{ url_for('recipes')}}">Recipe</a></li>
              <li><a href="#">Show Recipe</a></li>
@@ -98,7 +98,7 @@
             {% if messages %}
                 {% for message in messages %}
                     <div class="row flashes">
-                        <h4 class="green-text lighting-4 center-align">{{ message }}</h4>
+                        <h4 class="green-text lighting-4 center-align text-shadow -4">{{ message }}</h4>
                     </div>
                 {% endfor %}
             {% endif %}
@@ -120,17 +120,17 @@
                     <p class="grey-text text-lighten-4 center-align text-shadow">
                         Your one-stop online recipe catslogue
                     </p>
-                    <a href="#" class="white-text">
+                    <a href="https://www.facebook.com/" target="_blank" class="white-text">
                         <i class="fab fa-facebook fa-4x"></i>
                     </a>
-                    <a href="#" class="white-text">
+                    <a href="https://twitter.com/?lang=en" target="_blank" class="white-text">
                         <i class="fab fa-twitter fa-4x"></i>
                     </a>
-                    <a href="#" class="white-text">
+                    <a href="https://github.com/" target="_blank" class="white-text">
                         <i class="fab fa-github fa-4x"></i>
                     </a>
-                    <a href="#" class="white-text">
-                        <i class="fab fa-google-plus fa-4x"></i>
+                    <a href="https://www.linkedin.com/" target="_blank" class="white-text">
+                        <i class="fab fa-linkedin fa-4x"></i>
                     </a>
                 </div>
             </div>
