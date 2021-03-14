@@ -65,7 +65,7 @@
   background-position: center;
 }
 
-@media only screen and (min-width : 320px) { 
+@media only screen  (max-width : 320px) and min-with : 568) { 
 a.brand-logo {
     font-size: 20px;
 }
@@ -85,23 +85,39 @@ h3.green-text.text-darken-10.center-align {
     font-size: 30px;
 }
 
+.row.profile {
+    margin-bottom: 120px;
+}
+
+p.i-card {
+    white-space:pre-wrap;
+}
+
+p.s-card{
+    white-space:pre-line;
+}
+
+.card-image.center-align {
+    margin-left: -50px;
+}
+
 } 
-@media only screen and (min-width : 375px) {
+@media only screen  (max-width : 375px) and ( min-with : 667) {
 
 .divider.one {
     display: none;
 }
 
 h2{
-    font-size: 45px;
+    font-size: 55px;
 }
 
 h4{
-    font-size: 35px;
+    font-size: 45px;
 }
 
 a.brand-logo {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 h3.green-text.text-darken-10.center-align {
@@ -110,12 +126,81 @@ h3.green-text.text-darken-10.center-align {
 
 .col.s12.m6.l3 {
     margin-right: 9px;
-    padding-left: 43px;
+    padding-left: 45px;
 }
 
 .col.s12.m8.offset-m2 {
     margin-bottom: 200px;
 }
 
+rofile.container {
+    margin-left: 0px;
+
+}
+
+
+.row.card-container {
+    width: 320px;
+}
+@media only screen and (min-width : 414px) { 
+
+.col.s12.m6.l3 {
+    margin-right: 15px;
+    padding-left: 60px;
+}
+
+.col.s6.offset-s4.center-align {
+    width: 650px;
+    
+}
+.card-image {
+    font-weight: 700;
+    width: 300px;
+}
+
+
+.col.s5.pull-s7 {
+    width: fit-content;
+    overflow: hidden;
+    display:inline-flexbox;
+
+}
+.row .col.offset-s4: {
+    margin-right: -10px;
+    
+}
+
+.main.container {
+   position: relative;
+}
+
+.card-panel {
+  margin: 10px;
+  padding: 10px;
+}
+
+.main.container {
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+
+}
+
+.row.profile {
+    margin-bottom: 110px;
+
+}
+
+}
+@media only screen and (min-width : 992px) { 
+
+#recipe-card {
+    margin-left: 180px;
+  
+}
+
+section#recipe-card {
+    width: 1800px;
+}
 
 }
